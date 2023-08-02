@@ -1,0 +1,66 @@
+Maven Project->maven-archetype-quickstart 1.1
+spring-framework version:6.0.11
+*****Dependency*******
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-core</artifactId>
+    <version>6.0.11</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>6.0.11</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jdbc</artifactId>
+	<version>6.0.11</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+<dependency>
+	<groupId>com.mysql</groupId>
+	<artifactId>mysql-connector-j</artifactId>
+	<version>8.1.0</version>
+</dependency>
+Note: spring core and context and spring-jdbc version should be same.
+
+===========Spring Jdbc Configuration with XML file(dataSourceConfig.xml)=======================
+***Fetching Single Object using RowMapper<I> with our own class implemnted***
+->RowMapper<I> is a interface . it used for convert resultSet object to mentioned class object.
+->Directly we can't use beco'z of interface so that we have create our own class and implement RowMapper<I> to fetch single object.
+->it is mapping a row into class object..
+->Selecting Single object using "queryForObject()" method having RowMapper<I> our own created implementation class.
+Ex:See the Code(SpringJdbcTemplateConfigUsingXMLfile.java,getSingleStudentsDetails() method in IStudentDAO)
+
+***Fetching Single Object using RowMapper<I> with Annonymous Inner class, instead of creating our own implemention class***
+Ex:See the Code(SpringJdbcTemplateConfigUsingXMLfile.java,getSingleStudentsDetailsUsingAnnonymous() method in IStudentDAO)
+
+***Fetching Multiple Object using RowMapper<I> with our own class implemnted***
+Ex:See the Code(SpringJdbcTemplateConfigUsingXMLfile.java,getMultipleStudentsDetails() method in IStudentDAO)
+
+***Fetching Multiple Object using RowMapper<I> with Annonymous Inner class***
+Ex:See the Code(SpringJdbcTemplateConfigUsingXMLfile.java,getMultipleStudentsDetailsUsingAnnonymous() method in IStudentDAO)
+
+=============Spring Jdbc Configuration without using XML file=======================
+->only JavaConfig and main class has changed..
+Ex:See the code(SpringJdbcTemplateConfigUsingJavaConfig.java,javaConfig.java)
+
+============Spring Jdbc with Autowire and ComponentAnnotation==================================
+->only JavaConfig ,DaoImpl and main class has changed..
+Ex:See the code(SpringJdbcTemplateConfigUsingComponentAutowireJavaConfig.java,JavaConfigWithComponentAndAutowire.java,StudentDaoImplWithComponentAndAutowire.java)
+
+
+
+
+
+
+
+
+
+
